@@ -23,7 +23,7 @@ Route::post('users', '\App\Http\Controllers\UserController@store');
 Route::post('login', '\App\Http\Controllers\UserController@login');
 
 Route::group(['middleware'=>'auth:api'], function () {
-    Route::ApiResource( 'peliculas', '\App\Http\Controllers\PeliculasController');
+    Route::ApiResource( 'peliculas', '\App\Http\Controllers\peliculasController');
     Route::post('logout', '\App\Http\Controllers\UserController@logout');
 
 });
